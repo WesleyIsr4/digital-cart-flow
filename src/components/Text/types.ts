@@ -1,4 +1,4 @@
-import { colors } from 'styles/theme/colors/types'
+import { colors } from 'styles/theme/configs/colors/types'
 
 export type TextBased = {
   tag?: keyof JSX.IntrinsicElements // tag HTML como 'p', 'h1', 'span', etc.

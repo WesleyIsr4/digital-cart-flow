@@ -4,10 +4,7 @@ const GlobalStyles = createGlobalStyle`
  ${({ theme }) => css`
    html,
    body {
-   }
-
-   body {
-     overflow-x: hidden;
+     background: ${theme.colors.primaryWhite};
    }
 
    img {
@@ -24,7 +21,6 @@ const GlobalStyles = createGlobalStyle`
      padding: 0;
      margin: 0;
      box-sizing: border-box;
-
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
      text-rendering: optimizeLegibility;
