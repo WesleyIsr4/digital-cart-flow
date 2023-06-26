@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FieldInfo /> Should match snapshot 1`] = `
+.c0 {
+  position: absolute;
+  font-size: 14px;
+  color: #757575;
+  top: 100%;
+}
+
+<div>
+  <span
+    class="c0"
+    role="info"
+    type="info"
+  >
+    I am an error
+  </span>
+</div>
+`;

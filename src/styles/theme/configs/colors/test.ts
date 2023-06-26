@@ -11,6 +11,9 @@ describe('Colors theme', () => {
       primaryWhite: ' #FFFFFF',
       primaryBlue: '#191847',
       secondaryOrange: '#F5850B',
+      negativeBase: '#E50000',
+      warningBase: '#F9A006',
+      neutralBase: '#757575',
     })
   })
 })

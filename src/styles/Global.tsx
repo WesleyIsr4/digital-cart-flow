@@ -5,6 +5,8 @@ const GlobalStyles = createGlobalStyle`
    html,
    body {
      background: ${theme.colors.primaryWhite};
+
+     font-family: 'DM Sans', sans-serif;
    }
 
    img {

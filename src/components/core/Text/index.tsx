@@ -5,7 +5,6 @@ function Text({
   tag = 'p',
   role,
   ariaLabel,
-  // underline,
   overline,
   children,
   fontSize,
