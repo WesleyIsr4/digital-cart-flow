@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 import Text from 'components/core/Text'
 import CreditCardField from 'components/form/CreditCardField'
@@ -19,6 +20,7 @@ import * as S from './styles'
 const optionsCard = [MasterCard, DinnersClub, AmericanExpress, Visa, Elo]
 
 function Form() {
+  const { push } = useRouter()
   const [, setSelectedOption] = useState('')
 
   function createInstallmentsArray(numberInstallments: number) {
@@ -96,7 +98,7 @@ function Form() {
           onSelectChange={handleSelectChange}
           required
         />
-        <Button>Finalizar pagamento</Button>
+        <Button onClick={() => push('/checkout')}>Finalizar pagamento</Button>
       </S.FormMain>
     </S.Wrapper>
   )
