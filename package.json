@@ -11,10 +11,6 @@
     "prettier": "prettier --loglevel silent --write .",
     "test": "jest --maxWorkers=100%"
   },
-  "engines": {
-    "node": ">=14.0.0",
-    "yarn": ">=1.22.0"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
