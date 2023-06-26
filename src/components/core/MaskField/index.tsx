@@ -1,6 +1,6 @@
 import { isValid } from 'date-fns'
 import formatString from 'format-string-by-pattern'
-import { forwardRef, useCallback } from 'react'
+import { ChangeEvent, forwardRef, useCallback } from 'react'
 
 import maskTypes from 'utils/masks/maskTypes'
 
@@ -8,13 +8,23 @@ import Textfield from '../Textfield'
 import type * as T from './types'
 
 function Maskfield(
-  { label, error, mask, onChange, maxLength, disabled, color, ariaLabel, ...rest }: T.Textfield,
+  {
+    label,
+    error,
+    mask,
+    onChange,
+    maxLength = undefined,
+    disabled,
+    color,
+    ariaLabel,
+    ...rest
+  }: T.Textfield,
   ref: any
 ) {
   const handleChange = useCallback(
-    (e) => {
+    (e: ChangeEvent<HTMLInputElement>) => {
       const { value } = e.target
-      e.target.value = mask ? formatString(maskTypes[mask](value, maxLength), value) : value
+      e.target.value = mask ? formatString(maskTypes[mask](value), value) : value
 
       if ((mask === 'date' || mask === 'monthAndYear') && !isValid(new Date(e.target.value))) {
         const [day, month, year] = e.target.value.split('/')
@@ -22,7 +32,7 @@ function Maskfield(
       }
       onChange?.(e)
     },
-    [mask, onChange, maxLength]
+    [mask, onChange]
   )
 
   return (

@@ -14,6 +14,7 @@ export type Textfield = {
   required?: boolean
   rightElement?: ReactElement
   leftElement?: ReactElement
+  maxLenght?: number
 } & InputHTMLAttributes<HTMLInputElement>
 
 export type InputStyle = {
